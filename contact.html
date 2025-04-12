@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+        header {
+            background-color: #0f3460;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background: #1b98e0;
+            color: #ffffff;
+        }
+        section {
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .contact-form {
+            background: #0f3460;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #1b1b3a;
+            color: #e0e0e0;
+        }
+        .contact-form button {
+            background: #1b98e0;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: #125d98;
+        }
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #1b98e0;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+        .social-links a:hover {
+            background: #125d98;
+        }
+        .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+        footer {
+            background-color: #0f3460;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const numDots = 10; // Reduced number of dots
+            for (let i = 0; i < numDots; i++) {
+                let dot = document.createElement("div");
+                dot.className = "dot";
+                dot.style.top = Math.random() * window.innerHeight + "px";
+                dot.style.left = Math.random() * window.innerWidth + "px";
+                document.body.appendChild(dot);
+            }
+        });
+    </script>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Contact Me</h2>
+        <div class="contact-form">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="social-links">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alengeorgearackal@gmail.com" target="_blank"><img src="gmail.png" alt="Gmail"></a>
+            <a href="https://www.linkedin.com/in/alen-george-arackal-3996b535b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="https://github.com/Alen567" target="_blank"><img src="github.png" alt="GitHub"></a>
+        </div>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>

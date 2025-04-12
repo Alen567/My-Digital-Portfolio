@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+        header {
+            background-color: #0f3460;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background: #1b98e0;
+            color: #ffffff;
+        }
+        section {
+            padding: 60px 30px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .achievement {
+            background-color: #16213e;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+        .achievement img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #1b98e0;
+        }
+        .achievement h3 {
+            color: #1b98e0;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        footer {
+            background-color: #0f3460;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const numDots = 20;
+            for (let i = 0; i < numDots; i++) {
+                let dot = document.createElement("div");
+                dot.className = "dot";
+                dot.style.top = Math.random() * window.innerHeight + "px";
+                dot.style.left = Math.random() * window.innerWidth + "px";
+                document.body.appendChild(dot);
+            }
+        });
+    </script>
+    <header>
+        <h1>My Achievements</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>My Achievements</h2>
+        <div class="achievement-grid">
+            <div class="achievement">
+                <img src="Kali Linux.png" alt="Kali Linux Basics Certificate">
+                <h3>Certified in Kali Linux Basics</h3>
+                <p>Certificate for completion of course Introduction to Kali Linux Basics by Simplilearn (2024)</p>
+            </div>
+            <div class="achievement">
+                <img src="AR Bootcamp.png" alt="AR Bootcamp Certificate">
+                <h3>Certified in basics of AR/VR</h3>
+                <p>Completed a Bootcamp on Augmented and Virtual Reality Acceleration conducted by C-DAC Pune in association with MIT Academy of Engineering.</p>
+            </div>
+            <div class="achievement">
+                <img src="Python Essentials 1.png" alt="Python Essentials 1 Certificate">
+                <h3>Certified in Python Essentials 1</h3>
+                <p>Completed a comprehensive course offered by Cisco Networking Academy program.</p>
+            </div>
+            <div class="achievement">
+                <img src="Python Essentials 2.png" alt="Python Essentials 2 Certificate">
+                <h3>Certified in Python Essentials 2</h3>
+                <p>Completed a comprehensive course offered by Cisco Networking Academy program.</p>
+            </div>
+            <div class="achievement">
+                <img src="Linux OS.png" alt="Linux OS Certificate">
+                <h3>Certified in Linux OS Basics</h3>
+                <p>Completed  a Guest Lecture by Project Engineer at CDAC Pune</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>
